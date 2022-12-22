@@ -47,3 +47,9 @@ def decode_word(word)
   result = new_word.map { |char| decode_char(char) }
   result.join
 end
+
+def decode_message(message)
+  new_message = message.split(/  /)
+  result = new_message.map { |m| decode_word(m) }
+  result.join(' ')
+end
